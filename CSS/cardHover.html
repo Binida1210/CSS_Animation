@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flip Card</title>
+    <style>
+        .container{
+            perspective: 1000px;
+            margin: 100px 300px;
+            display: flex;
+            gap: 2rem;
+        }
+
+        .front,
+        .back {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+        }
+
+        img{
+            width: 100%;
+            height: 100%;
+        }
+
+        .card{
+            width: 250px;
+            height: 450px;
+            transform-style: preserve-3d;
+            transition: all 1.8s ease;
+        }
+
+        .card:hover{
+            transform: rotateY(180deg);
+        }
+
+        .front{
+            color: rgb(255, 255, 255);
+            background-color: rgb(213, 102, 61);
+            transform: rotateY(180deg);
+        }
+
+        .back{
+            color: rgb(255, 255, 255);
+            background-color: rgb(59, 108, 186);
+            backface-visibility: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="front">
+                <img src="https://imagedelivery.net/5ejkUOtsMH5sf63fw6q33Q/82e9deff-f202-4021-1235-e000e1bdaf00/public" alt="">
+            </div>
+            <div class="back">
+                <p>Yayoi</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
