@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+<h2 class="text-xl font-bold my-4">🔻 Không dùng <code>break-inside-avoid</code></h2>
+<div class="columns-2 gap-4">
+  <!-- Card không tránh vỡ -->
+  <div class="bg-blue-100 p-4 rounded shadow">
+    <h3 class="font-semibold text-lg">Tin 1</h3>
+    <p>
+      Nội dung rất dài...<br>và dài nữa...<br>nhiều dòng lắm...<br>để thử xem có bị cắt không...
+    </p>
+  </div>
+  <div class="bg-blue-100 p-4 rounded shadow">
+    <h3 class="font-semibold text-lg">Tin 2</h3>
+    <p>
+      Đây cũng là một bài viết dài dòng nhiều dòng để kiểm tra...
+    </p>
+  </div>
+  <div class="bg-blue-100 p-4 rounded shadow">
+    <h3 class="font-semibold text-lg">Tin 3</h3>
+    <p>
+      Càng dài càng tốt để thấy lỗi chia đôi card giữa các cột khi không tránh break.
+    </p>
+  </div>
+</div>
+
+<h2 class="text-xl font-bold my-8">✅ Có dùng <code>break-inside-avoid</code></h2>
+<div class="columns-2 gap-4">
+  <!-- Card tránh vỡ -->
+  <div class="break-inside-avoid bg-green-100 p-4 rounded shadow">
+    <h3 class="font-semibold text-lg">Tin 1</h3>
+    <p>
+      Nội dung rất dài...<br>và dài nữa...<br>nhiều dòng lắm...<br>để thử xem có bị cắt không...
+    </p>
+  </div>
+  <div class="break-inside-avoid bg-green-100 p-4 rounded shadow">
+    <h3 class="font-semibold text-lg">Tin 2</h3>
+    <p>
+      Đây cũng là một bài viết dài dòng nhiều dòng để kiểm tra...
+    </p>
+  </div>
+  <div class="break-inside-avoid bg-green-100 p-4 rounded shadow">
+    <h3 class="font-semibold text-lg">Tin 3</h3>
+    <p>
+      Càng dài càng tốt để thấy lỗi chia đôi card giữa các cột khi không tránh break.
+    </p>
+  </div>
+</div>
+
+
+</body>
+</html>
